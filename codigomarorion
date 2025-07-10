@@ -1,6 +1,6 @@
 using System;
 
-namespace MascotasApp
+namespace Mascota
 {
     class Mascota
     {
