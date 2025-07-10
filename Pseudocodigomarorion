@@ -11,12 +11,18 @@ metodo constructor animal (string nom; int años; string anim; string sonido)
     años = 4
     anim = "gato"
     sonido = "maw"
-    
-   Imprimir "Nombre: " + nom
-    Imprimir "Años: " + años
-     Imprimir "Animal: " + anim
-       Imprimir "Sonido: " + sonido
-        
+
+Método MostrarInformacion(mascotamayite)
+
+Imprimir "Nombre: " + nom
+Imprimir "Años: " + años
+Imprimir "Animal: " + anim
+Imprimir "Sonido: " + sonido
+
+Método emitirsonido(mascotamayite)
+
+Imprimir "Maw"
+
 
 Fin clase Producto
 
