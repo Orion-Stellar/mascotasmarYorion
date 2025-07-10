@@ -1,0 +1,36 @@
+using System;
+
+public class Producto
+{
+    string nombre;
+    int añosdevida;
+    string animal;
+    string sonido;
+
+    public Producto(string nom, int anos, string anim, string son)
+    {
+        nombre = nom;
+        añosdevida = anos;
+        animal = anim;
+        sonido = son;
+
+       
+    }
+    public void MostrarInformacion()
+    {
+        Console.WriteLine("Informacion de la mascota:");
+        Console.WriteLine("Nombre: " + nombre);
+        Console.WriteLine("Anos: " + añosdevida);
+        Console.WriteLine("Animal: " + animal);
+        Console.WriteLine("Sonido: " + sonido);
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        Producto miMascota = new Producto("Mayo", 4, "gato", "maw");
+        miMascota.MostrarInformacion();
+    }
+}
