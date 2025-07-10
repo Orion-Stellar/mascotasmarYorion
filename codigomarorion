@@ -1,36 +1,44 @@
 using System;
 
-public class Producto
+namespace MascotasApp
 {
-    string nombre;
-    int añosdevida;
-    string animal;
-    string sonido;
-
-    public Producto(string nom, int anos, string anim, string son)
+    class Mascota
     {
-        nombre = nom;
-        añosdevida = anos;
-        animal = anim;
-        sonido = son;
+        private string nombre;
+        private int anosDeVida;
+        private string animal;
+        private string sonido;
 
-       
+        public Mascota(string nom, int anos, string anim, string son)
+        {
+            nombre = nom;
+            anosDeVida = anos;
+            animal = anim;
+            sonido = son;
+        }
+
+        public void MostrarInformacion()
+        {
+            Console.WriteLine("Nombre: " + nombre);
+            Console.WriteLine("Anos: " + anosDeVida);
+            Console.WriteLine("Animal: " + animal);
+            Console.WriteLine("Sonido: " + sonido);
+        }
+
+        public void EmitirSonido()
+        {
+            Console.WriteLine(nombre + " dice " + sonido);
+        }
     }
-    public void MostrarInformacion()
-    {
-        Console.WriteLine("Informacion de la mascota:");
-        Console.WriteLine("Nombre: " + nombre);
-        Console.WriteLine("Anos: " + añosdevida);
-        Console.WriteLine("Animal: " + animal);
-        Console.WriteLine("Sonido: " + sonido);
-    }
-}
 
-public class Program
-{
-    public static void Main()
+    class Program
     {
-        Producto miMascota = new Producto("Mayo", 4, "gato", "maw");
-        miMascota.MostrarInformacion();
+        static void Main(string[] args)
+        {
+            Mascota miMascota = new Mascota("Mayo", 4, "gato", "maw");
+
+            miMascota.MostrarInformacion();
+            miMascota.EmitirSonido();
+        }
     }
 }
